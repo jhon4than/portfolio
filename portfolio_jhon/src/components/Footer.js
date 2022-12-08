@@ -4,6 +4,7 @@ import logo from "../assets/img/JhonMeirele.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import navIcon4 from "../assets/img/nav-icon4.svg";
 
 export const Footer = () => {
   return (
@@ -37,6 +38,9 @@ export const Footer = () => {
               >
                 <img src={navIcon3} alt="Icon" />
               </a>
+              <a href="https://github.com/jhon4than" target="_blank" rel="noreferrer">
+                  <img src={navIcon4} alt="" />
+                </a>
             </div>
             <p>Thank you for attention</p>
           </Col>
