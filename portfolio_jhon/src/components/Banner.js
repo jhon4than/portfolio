@@ -96,7 +96,7 @@ export const Banner = () => {
                         <span className="wrap">{text}</span>
                       </span>
                     </h3>
-                    <p>{i18n.t("banner.presentation")}</p>
+                    <h5>{i18n.t("banner.presentation")}</h5>
 
                     <HashLink to="#connect">
                       <button onClick={() => console.log("connect")}>
