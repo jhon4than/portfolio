@@ -21,7 +21,7 @@ const messages = {
             },
             projects: {
                 project: 'Projetos',
-                projectInfo: 'Eu mostro-vos a todos os grandes e pequenos websites que fiz até agora',
+                projectInfo: 'Aqui estão alguns grandes e pequenos websites e softwares que já desenvolvi até agora',
                 tab: 'Aba',
                 project1 : 'Aplicativo de Aluguel de Carros de Luxo',
                 project2 : 'Tabela reutilizável construída em Typescript',
