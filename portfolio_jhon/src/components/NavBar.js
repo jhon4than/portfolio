@@ -7,10 +7,14 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
 import navIcon4 from "../assets/img/nav-icon4.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
+import { i18n } from "../translate/i18n";
+
+const I18N_STORAGE_KEY = "i18nextLng";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY));
 
   useEffect(() => {
     const onScroll = () => {
@@ -28,6 +32,11 @@ export const NavBar = () => {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+  };
+
+  const handleSelectChange = (event) => {
+    localStorage.setItem(I18N_STORAGE_KEY, event.target.value);
+    window.location.reload();
   };
 
   return (
@@ -49,7 +58,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("home")}
               >
-                Home
+                {i18n.t("navbar.home")}
               </Nav.Link>
               <Nav.Link
                 href="#skills"
@@ -58,7 +67,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("skills")}
               >
-                Skills
+                {i18n.t("navbar.skills")}
               </Nav.Link>
               <Nav.Link
                 href="#projects"
@@ -69,32 +78,53 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("projects")}
               >
-                Projects
+                {i18n.t("navbar.project")}
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
                 <a
                   href="https://www.linkedin.com/in/jhonathan-meireles-440a2873/"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="https://www.facebook.com/jhonathan.meireles/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.facebook.com/jhonathan.meireles/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon2} alt="" />
                 </a>
-                <a href="https://www.instagram.com/jhonmeireles/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.instagram.com/jhonmeireles/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon3} alt="" />
                 </a>
-                <a href="https://github.com/jhon4than" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/jhon4than"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={navIcon4} alt="" />
                 </a>
               </div>
               <HashLink to="#connect">
                 <button className="vvd">
-                  <span>Let’s Connect</span>
+                  <span>{i18n.t("navbar.connect")}</span>
                 </button>
               </HashLink>
+              <select
+                className="selectLanguage"
+                onChange={handleSelectChange}
+                value={language}
+              >
+                <option value="pt-BR">PT</option>
+                <option value="en-US">ENG</option>
+              </select>
             </span>
           </Navbar.Collapse>
         </Container>
