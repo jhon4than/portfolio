@@ -71,8 +71,8 @@ export const Banner = () => {
                     }
                   >
                     <span className="tagline">{i18n.t("banner.welcome")}</span>
-                    <h1>
-                      {`JhonMeireles!`}{" "}
+                    <h1>{`JhonMeireles!`} </h1>
+                    <h3>
                       <span
                         className="txt-rotate"
                         dataPeriod="1000"
@@ -80,7 +80,7 @@ export const Banner = () => {
                       >
                         <span className="wrap">{text}</span>
                       </span>
-                    </h1>
+                    </h3>
                     <p>{i18n.t("banner.presentation")}</p>
                     <button onClick={() => console.log("connect")}>
                       {i18n.t("navbar.connect")} <ArrowRightCircle size={25} />
