@@ -21,7 +21,7 @@ const messages = {
             },
             projects: {
                 project: 'Projects',
-                projectInfo: 'I show you to all the big and small websites I have done so far',
+                projectInfo: 'Here are some big and small websites and software I have developed so far',
                 tab: 'Tab',
                 project1 : 'Luxury Car Rental Application',
                 project2 : 'Reusable Table built in Typescript',

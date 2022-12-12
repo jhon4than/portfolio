@@ -6,6 +6,8 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { i18n } from "../translate/i18n";
 import whatsapp from "../assets/img/whatsapp.png";
+import { HashLink } from "react-router-hash-link";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -58,10 +60,23 @@ export const Banner = () => {
   };
 
   return (
-    <>
+    <Router>
       <section className="banner" id="home">
         <Container>
           <Row className="aligh-items-center">
+            <Col xs={12} md={6} xl={5}>
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__zoomIn" : ""
+                    }
+                  >
+                    <img src={headerImg} alt="Header Img" />
+                  </div>
+                )}
+              </TrackVisibility>
+            </Col>
             <Col xs={12} md={6} xl={7}>
               <TrackVisibility>
                 {({ isVisible }) => (
@@ -82,22 +97,13 @@ export const Banner = () => {
                       </span>
                     </h3>
                     <p>{i18n.t("banner.presentation")}</p>
-                    <button onClick={() => console.log("connect")}>
-                      {i18n.t("navbar.connect")} <ArrowRightCircle size={25} />
-                    </button>
-                  </div>
-                )}
-              </TrackVisibility>
-            </Col>
-            <Col xs={12} md={6} xl={5}>
-              <TrackVisibility>
-                {({ isVisible }) => (
-                  <div
-                    className={
-                      isVisible ? "animate__animated animate__zoomIn" : ""
-                    }
-                  >
-                    <img src={headerImg} alt="Header Img" />
+
+                    <HashLink to="#connect">
+                      <button onClick={() => console.log("connect")}>
+                        {i18n.t("navbar.connect")}{" "}
+                        <ArrowRightCircle size={25} />
+                      </button>
+                    </HashLink>
                   </div>
                 )}
               </TrackVisibility>
@@ -117,6 +123,6 @@ export const Banner = () => {
       >
         <img src={whatsapp} alt="WhatsApp" />
       </a>
-    </>
+    </Router>
   );
 };
