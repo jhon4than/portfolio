@@ -4,6 +4,8 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { i18n } from "../translate/i18n";
+import whatsapp from "../assets/img/whatsapp.png";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -12,9 +14,9 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const toRotate = [
-    "Web Developer",
-    "Blockchain Developer",
-    "Software Engineer",
+    i18n.t("banner.web"),
+    i18n.t("banner.blockchain"),
+    i18n.t("banner.software"),
   ];
   const period = 2000;
 
@@ -56,66 +58,65 @@ export const Banner = () => {
   };
 
   return (
-    <section className="banner" id="home">
-      <Container>
-        <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
-                  <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>
-                    {`JhonMeireles!`}{" "}
-                    <span
-                      className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Blockchain Developer", "Software Engineer" ]'
-                    >
-                      <span className="wrap">{text}</span>
-                    </span>
-                  </h1>
-                  <p>
-                    Meu nome é Jhonathan Meireles de Oliveira. Sou estudante de
-                    Engenharia de Software, amante de tecnologia, inicialmente o
-                    meu primeiro emprego na área de tecnologia foi como
-                    estagiário desenvolvedor web onde trabalhei com as seguintes
-                    tecnologias (Microsoft SQL Server · JavaScript · Yii · PHP)
-                    na empresa "Grupo Você", e atualmente estou estagiando como
-                    Blockchain Developer usando as principais tecnologias (
-                    Amazon EC2 · Kubernetes · Web3 · TypeScript · Node.js ·
-                    Sonarqube · DevOps · React.js · Docker · .NET Framework ·
-                    Python · Microsoft SQL Server · ASP.NET MVC · ASP.NET ·
-                    Blockchain · C#) na empresa "Delage Consultoria e Sistemas".
-                    Sou um jovem atencioso, comprometido com minhas tarefas,
-                    além disso, gosto de trazer soluções para o problema das
-                    pessoas utilizando da tecnologia a meu favor.
-                  </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
-                </div>
-              )}
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
-                  }
-                >
-                  <img src={headerImg} alt="Header Img" />
-                </div>
-              )}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+    <>
+      <section className="banner" id="home">
+        <Container>
+          <Row className="aligh-items-center">
+            <Col xs={12} md={6} xl={7}>
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__fadeIn" : ""
+                    }
+                  >
+                    <span className="tagline">{i18n.t("banner.welcome")}</span>
+                    <h1>
+                      {`JhonMeireles!`}{" "}
+                      <span
+                        className="txt-rotate"
+                        dataPeriod="1000"
+                        data-rotate='[ i18n.t("banner.web"), i18n.t("banner.blockchain"), i18n.t("banner.software") ]'
+                      >
+                        <span className="wrap">{text}</span>
+                      </span>
+                    </h1>
+                    <p>{i18n.t("banner.presentation")}</p>
+                    <button onClick={() => console.log("connect")}>
+                      {i18n.t("navbar.connect")} <ArrowRightCircle size={25} />
+                    </button>
+                  </div>
+                )}
+              </TrackVisibility>
+            </Col>
+            <Col xs={12} md={6} xl={5}>
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__zoomIn" : ""
+                    }
+                  >
+                    <img src={headerImg} alt="Header Img" />
+                  </div>
+                )}
+              </TrackVisibility>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      <a
+        href="https://wa.me/+5532991372975"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+        }}
+      >
+        <img src={whatsapp} alt="WhatsApp" />
+      </a>
+    </>
   );
 };

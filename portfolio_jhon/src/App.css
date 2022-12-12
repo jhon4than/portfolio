@@ -232,6 +232,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 nav.navbar .navbar-img{
   width: 150px;
 }
+nav.navbar .selectLanguage{
+  margin-left: 5px;
+}
 
 /************ Banner Css ************/
 .banner {
@@ -543,7 +546,7 @@ nav.navbar .navbar-img{
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 25px 0;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;

@@ -5,7 +5,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/color-sharp.png";
+import { i18n } from "../translate/i18n";
 
 export const Skills = () => {
   const responsive = {
@@ -34,12 +35,12 @@ export const Skills = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
-                        <h2>About Skills</h2>
-                        <p>Eu aprendi diferentes linguagens de programação até agora e no que diz respeito às minhas habilidades<br></br></p>
+                        <h2>{i18n.t("skills.about")}</h2>
+                        <p>{i18n.t("skills.about1")}<br></br></p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>{i18n.t("skills.web")}</h5>
                             </div>
                             <div className="item">
                                 <img src={meter2} alt="Image" />
