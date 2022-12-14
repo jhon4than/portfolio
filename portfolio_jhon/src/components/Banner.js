@@ -99,7 +99,7 @@ export const Banner = () => {
                     <h5>{i18n.t("banner.presentation")}</h5>
 
                     <HashLink to="#connect">
-                      <button onClick={() => console.log("connect")}>
+                      <button >
                         {i18n.t("navbar.connect")}{" "}
                         <ArrowRightCircle size={25} />
                       </button>
