@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/JhonMeirele.png";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
-import navIcon4 from "../assets/img/nav-icon4.svg";
+import logo from "../assets/image/JhonMeirele.png";
+import navIcon1 from "../assets/image/nav-icon1.svg";
+import navIcon2 from "../assets/image/nav-icon2.svg";
+import navIcon3 from "../assets/image/nav-icon3.svg";
+import navIcon4 from "../assets/image/nav-icon4.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import { i18n } from "../translate/i18n";
+import brasil from "../assets/image/brasil.png";
+import usa from "../assets/image/estados-unidos.png";
 
 const I18N_STORAGE_KEY = "i18nextLng";
 
@@ -35,7 +37,7 @@ export const NavBar = () => {
   };
 
   const handleSelectChange = (event) => {
-    localStorage.setItem(I18N_STORAGE_KEY, event.target.value);
+    localStorage.setItem(I18N_STORAGE_KEY, event.target.alt);
     window.location.reload();
   };
 
@@ -117,14 +119,12 @@ export const NavBar = () => {
                   <span>{i18n.t("navbar.connect")}</span>
                 </button>
               </HashLink>
-              <select
-                className="selectLanguage"
-                onChange={handleSelectChange}
-                value={language}
-              >
-                <option value="pt-BR">PT</option>
-                <option value="en-US">ENG</option>
-              </select>
+              <div className="imageBr" onClick={handleSelectChange}>
+                <img src={brasil} alt="pt-BR" ></img>
+              </div>
+              <div className="imageUsa" onClick={handleSelectChange}>
+                <img src={usa} alt="en-US"></img>
+              </div>
             </span>
           </Navbar.Collapse>
         </Container>

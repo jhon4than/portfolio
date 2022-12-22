@@ -1,14 +1,14 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/projImg1.png";
-import projImg2 from "../assets/img/loginPhp.png";
-import projImg3 from "../assets/img/calculator.png";
-import projImg4 from "../assets/img/funcoes.png";
-import projImg5 from "../assets/img/blockchainpython.png";
-import projImg6 from "../assets/img/paypal.png";
-import projImg7 from "../assets/img/alugue.png";
-import projImg8 from "../assets/img/reutilizacao.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import projImg1 from "../assets/image/projImg1.png";
+import projImg2 from "../assets/image/loginPhp.png";
+import projImg3 from "../assets/image/calculator.png";
+import projImg4 from "../assets/image/funcoes.png";
+import projImg5 from "../assets/image/blockchainpython.png";
+import projImg6 from "../assets/image/paypal.png";
+import projImg7 from "../assets/image/alugue.png";
+import projImg8 from "../assets/image/reutilizacao.png";
+import colorSharp2 from "../assets/image/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { i18n } from "../translate/i18n";
@@ -127,7 +127,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt="image1"></img>
     </section>
   )
 }

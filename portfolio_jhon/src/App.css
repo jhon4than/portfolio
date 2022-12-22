@@ -235,12 +235,22 @@ nav.navbar .navbar-img{
 nav.navbar .selectLanguage{
   margin-left: 5px;
 }
+nav.navbar .imageBr{
+  margin-left: 5px;
+  width: 40px;
+  cursor: pointer;
+}
+nav.navbar .imageUsa{
+  margin-left: 5px;
+  width: 40px;
+  cursor: pointer;
+}
 
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/universo2.png');
+  background-image: url('./assets/image/universo2.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -547,7 +557,7 @@ nav.navbar .selectLanguage{
 /************ Footer Css ************/
 .footer {
   padding: 25px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  background-image: url('./assets/image/footer-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
