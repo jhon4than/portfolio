@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../assets/image/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { i18n } from "../translate/i18n";
@@ -45,7 +45,7 @@ export const Contact = () => {
         .then((response) => {
           setButtonText(i18n.t("contact.button"));
           setFormDetails(formInitialDetails);
-          if (response.code == 200) {
+          if (response.code === 200) {
             setStatus({ succes: true, message: i18n.t("contact.message") });
             setTimeout(() => {
               setStatus({});
