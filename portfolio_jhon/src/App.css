@@ -299,18 +299,33 @@ nav.navbar .imageUsa{
   margin-left: 25px;
 }
 .banner img {
-  animation: updown 3s linear infinite;
+  background: url(./assets/image/terra.png) repeat-x 0 0;
+	border: 1px solid rgba(26,18,101,0.3);
+	border-radius: 225px;
+	box-shadow: -8px 0 25px rgba(256,256,256,0.3), -1px -2px 14px rgba(256,256,256,0.5) inset;
+	height: 450px;
+	left: 50%;
+	margin: 10px 0 0;
+	top: 50%;
+	width: 450px;
+	-webkit-animation: loop 80s linear infinite;
+	animation: loop 80s linear infinite;
+	-moz-animation: loop 80s linear infinite;
 }
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
+@-webkit-keyframes loop {
+  0% { background-position: 0 0; }
+100%{ background-position: -900px 0;}
+
+}
+@-moz-keyframes loop {
+  0% { background-position: 0 0; }
+100%{ background-position: -900px 0;}
+
+}
+@keyframes loop {
+  0% { background-position: 0 0; }
+100%{ background-position: -900px 0;}
+
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
