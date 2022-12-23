@@ -31,6 +31,7 @@ const messages = {
                 project6 : 'Consumindo API Paypal',
                 project7 : 'Sistema Controle Academico',
                 project8 : 'CRUD - Sistema de Login + Consumo API TMDB',
+                project9 : 'Como o Kubernetes pode ajudar a simplificar o gerenciamento de aplicativos em contêineres? Veja na prática!',
             },
             contact: {
                 contactHome: 'Entre em Contato',

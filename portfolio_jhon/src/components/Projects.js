@@ -8,6 +8,7 @@ import projImg5 from "../assets/image/blockchainpython.png";
 import projImg6 from "../assets/image/paypal.png";
 import projImg7 from "../assets/image/alugue.png";
 import projImg8 from "../assets/image/reutilizacao.png";
+import projImg9 from "../assets/image/artigoKubernetes.png";
 import colorSharp2 from "../assets/image/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -41,10 +42,10 @@ export const Projects = () => {
       link: "https://github.com/jhon4than/ProjetoPOF"
     },
     {
-      title:"Python",
-      description: i18n.t("projects.project5"),
-      imgUrl: projImg5,
-      link: "https://github.com/jhon4than/API_Blockchain"
+      title:"Artigo Kubernetes",
+      description: i18n.t("projects.project9"),
+      imgUrl: projImg9,
+      link: "https://medium.com/@jhon4than1995/como-o-kubernetes-pode-ajudar-a-simplificar-o-gerenciamento-de-aplicativos-em-cont%C3%AAineres-1642213e4dc9"
     },
     {
       title:"Consumindo API",
@@ -66,6 +67,12 @@ export const Projects = () => {
       description: i18n.t("projects.project8"),
       imgUrl: projImg2,
       link: "https://github.com/jhon4than/CakePhpSistemaLogin"
+    },
+    {
+      title:"Python",
+      description: i18n.t("projects.project5"),
+      imgUrl: projImg5,
+      link: "https://github.com/jhon4than/API_Blockchain"
     },
   ];
 

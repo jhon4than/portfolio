@@ -31,6 +31,7 @@ const messages = {
                 project6 : 'Consuming Paypal API',
                 project7 : 'Academic Control System',
                 project8 : 'CRUD - Login System + TMDB API consumption',
+                project9 : 'How can Kubernetes help simplify containerized application management? See it in practice!',
             },
             contact: {
                 contactHome: 'Get In Touch',
