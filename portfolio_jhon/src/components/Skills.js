@@ -1,6 +1,16 @@
 import meter1 from "../assets/image/meter1.svg";
 import meter2 from "../assets/image/meter2.svg";
 import meter3 from "../assets/image/meter3.svg";
+
+import blockchain from "../assets/image/blockchain.png";
+import cssImage from "../assets/image/css-3.png";
+import html5Image from "../assets/image/html5.png";
+import javaImage from "../assets/image/java.png";
+import reactNativeImage from "../assets/image/react-native-removebg-preview.png";
+import cImage from "../assets/image/do-sustenido.png";
+import reactjsImage from "../assets/image/reactjs.svg";
+import javaScriptImage from "../assets/image/script-java.png";
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/image/color-sharp.png";
@@ -36,35 +46,31 @@ export const Skills = () => {
                         <p>{i18n.t("skills.about1")}<br></br></p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image1" />
-                                <h5>{i18n.t("skills.web")}</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image2" />
+                                <img src={javaScriptImage} alt="Image2" />
                                 <h5>JavaScript</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image3" />
+                                <img src={cImage} alt="Image3" />
                                 <h5>C#</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image4" />
+                                <img src={reactjsImage} alt="Image4" />
                                 <h5>React.JS</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image5" />
+                                <img src={javaImage} alt="Image5" />
                                 <h5>Java</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image6" />
+                                <img src={html5Image} alt="Image6" />
                                 <h5>HTML/CSS</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image7" />
+                                <img src={blockchain} alt="Image7" />
                                 <h5>Blockchain</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image8" />
+                                <img src={reactjsImage} alt="Image8" />
                                 <h5>React Native</h5>
                             </div>
                         </Carousel>
